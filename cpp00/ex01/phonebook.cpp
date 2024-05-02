@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:26:31 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/02 13:44:29 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:02:27 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,27 +33,23 @@ static Contact	get_new_contact()
 
 	std::cout << "First name:\t";
 	std::cin >> first_name;
-	contact.set_first_name(first_name);
 
 	std::cout << "Last name:\t";
 	std::cin >> last_name;
-	contact.set_last_name(last_name);
 
 	std::cout << "Nickname:\t";
 	std::cin >> nickname;
-	contact.set_nickname(nickname);
 
 	do
 	{
 		std::cout << "Phone number:\t";
 		std::cin >> phone_number;
 	} while (!is_valid_number(phone_number));
-	contact.set_phone_number(phone_number);
 
 	std::cout << "Darkest secret:\t";
 	std::cin >> darkest_secret;
-	contact.set_darkest_secret(darkest_secret);
 
+	contact.constructor(first_name, last_name, nickname, phone_number, darkest_secret);
 	return (contact);
 }
 
@@ -99,21 +95,27 @@ void	PhoneBook::search()
 	}
 
 	std::cout << "Enter an id to display the information:\t";
-	int	id;
+	string	id;
 	std::cin >> id;
 
-	if (id < 0 || id > 8)
+	if (!is_valid_number(id))
 	{
-		std::cout << "Id out of range.";
+		std::cout << "Invalid input." << std::endl;
 		return;
 	}
 
-	std::cout << "Contact " << id << std::endl;
-	std::cout << "First name:\t" << _contacts[id].get_first_name() << std::endl;
-	std::cout << "Last name:\t" << _contacts[id].get_last_name() << std::endl;
-	std::cout << "Nickname:\t" << _contacts[id].get_nickname() << std::endl;
-	std::cout << "Phone number:\t" << _contacts[id].get_phone_number() << std::endl;
-	std::cout << "Darkest secret:\t" << _contacts[id].get_darkest_secret() << std::endl;
+	if (atoi(id.c_str()) < 0 || atoi(id.c_str()) > _count - 1)
+	{
+		std::cout << "Id out of range." << std::endl;
+		return;
+	}
+
+	std::cout << "Contact " << atoi(id.c_str()) << std::endl;
+	std::cout << "First name:\t" << _contacts[atoi(id.c_str())].get_first_name() << std::endl;
+	std::cout << "Last name:\t" << _contacts[atoi(id.c_str())].get_last_name() << std::endl;
+	std::cout << "Nickname:\t" << _contacts[atoi(id.c_str())].get_nickname() << std::endl;
+	std::cout << "Phone number:\t" << _contacts[atoi(id.c_str())].get_phone_number() << std::endl;
+	std::cout << "Darkest secret:\t" << _contacts[atoi(id.c_str())].get_darkest_secret() << std::endl;
 }
 
 int main(int ac, char **av)
