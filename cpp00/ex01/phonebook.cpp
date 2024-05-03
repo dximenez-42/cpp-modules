@@ -6,19 +6,18 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:26:31 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/03 19:24:59 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 22:27:23 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-using std::string;
 
 PhoneBook::PhoneBook()
 {
 	_count = 0;
 }
 
-static bool	is_valid_number(string s)
+static bool	is_valid_number(std::string s)
 {
 	for (size_t i = 0; i < s.length(); i++)
 		if (!isdigit(s[i]))
@@ -29,7 +28,7 @@ static bool	is_valid_number(string s)
 static Contact	get_new_contact()
 {
 	Contact	contact;
-	string	first_name, last_name, nickname, phone_number, darkest_secret;
+	std::string	first_name, last_name, nickname, phone_number, darkest_secret;
 
 	std::cout << "First name:\t";
 	std::cin >> first_name;
@@ -68,7 +67,7 @@ void	PhoneBook::add()
 	}
 }
 
-static string	truncate(string s)
+static std::string	truncate(std::string s)
 {
 	if (s.length() <= 10)
 		return s;
@@ -95,7 +94,7 @@ void	PhoneBook::search()
 	}
 
 	std::cout << "Enter an id to display the information:\t";
-	string	id;
+	std::string	id;
 	std::cin >> id;
 
 	if (!is_valid_number(id))
@@ -121,7 +120,7 @@ void	PhoneBook::search()
 int main()
 {
 	PhoneBook	phonebook;
-	string		read;
+	std::string		read;
 	
 	while (true)
 	{

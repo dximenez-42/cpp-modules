@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 22:09:27 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/03 22:15:35 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 22:28:37 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	string	input;
+	std::string	input;
 
 	std::cout << "Heap zombie name:\t";
 	std::cin >> input;

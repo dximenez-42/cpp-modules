@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 21:23:21 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/03 22:04:09 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 22:28:26 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(string name)
+Zombie::Zombie(std::string name)
 {
 	_name = name;
 }

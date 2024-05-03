@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:28:27 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/03 19:25:14 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 22:26:29 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,24 @@
 
 #include <iostream>
 
-using std::string;
-
 class Contact
 {
 	private:
-		string			_first_name;
-		string			_last_name;
-		string			_nickname;
-		string			_phone_number;
-		string			_darkest_secret;
+		std::string			_first_name;
+		std::string			_last_name;
+		std::string			_nickname;
+		std::string			_phone_number;
+		std::string			_darkest_secret;
 	public:
 		Contact() {}
 		
-		void	constructor(string first_name, string last_name, string nickname, string phone_number, string darkest_secret);
+		void	constructor(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret);
 
-		string	get_first_name();
-		string	get_last_name();
-		string	get_nickname();
-		string	get_phone_number();
-		string	get_darkest_secret();
+		std::string	get_first_name();
+		std::string	get_last_name();
+		std::string	get_nickname();
+		std::string	get_phone_number();
+		std::string	get_darkest_secret();
 };
 
 #endif
