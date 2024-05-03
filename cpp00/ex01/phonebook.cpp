@@ -6,11 +6,11 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:26:31 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/02 14:02:27 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 19:24:59 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 using std::string;
 
 PhoneBook::PhoneBook()
@@ -89,9 +89,9 @@ void	PhoneBook::search()
 	for (short i = 0; i < _count; i++)
 	{
 		std::cout	<< std::setw(10) << i << "|"
-					<< std::setw(10) << _contacts[i].get_first_name() << "|"
-					<< std::setw(10) << _contacts[i].get_last_name() << "|"
-					<< std::setw(10) << _contacts[i].get_nickname() << std::endl;
+					<< std::setw(10) << truncate(_contacts[i].get_first_name()) << "|"
+					<< std::setw(10) << truncate(_contacts[i].get_last_name()) << "|"
+					<< std::setw(10) << truncate(_contacts[i].get_nickname()) << std::endl;
 	}
 
 	std::cout << "Enter an id to display the information:\t";
@@ -118,7 +118,7 @@ void	PhoneBook::search()
 	std::cout << "Darkest secret:\t" << _contacts[atoi(id.c_str())].get_darkest_secret() << std::endl;
 }
 
-int main(int ac, char **av)
+int main()
 {
 	PhoneBook	phonebook;
 	string		read;

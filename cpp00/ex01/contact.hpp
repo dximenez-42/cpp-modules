@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:28:27 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/02 14:02:31 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 19:25:14 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ using std::string;
 class Contact
 {
 	private:
-		unsigned short	_id;
 		string			_first_name;
 		string			_last_name;
 		string			_nickname;

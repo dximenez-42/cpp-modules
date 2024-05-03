@@ -6,11 +6,11 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:46:28 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/02 14:02:21 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/03 19:25:07 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 using std::string;
 
 void	Contact::constructor(string first_name, string last_name, string nickname, string phone_number, string darkest_secret)
