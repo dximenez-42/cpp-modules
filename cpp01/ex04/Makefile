@@ -1,6 +1,6 @@
 NAME		= sed
 CXX			= g++
-CXXFLAGS	= -std=c++98 #-Wall -Wextra -Werror
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRCS		= main.cpp program.cpp
 OBJS		= $(SRCS:.cpp=.o)
