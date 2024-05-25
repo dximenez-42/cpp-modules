@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 21:28:40 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/14 14:59:38 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/05/25 20:10:09 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		Fixed(const float num);
 		
 		Fixed(const Fixed &ref);				// Copy constructor
-		Fixed &operator=(const Fixed &ref);		// Copy asignment operator
+		Fixed &operator=(const Fixed &ref);		// Copy assignment operator
 		~Fixed();								// Destructor
 
 		int		getRawBits(void) const;
