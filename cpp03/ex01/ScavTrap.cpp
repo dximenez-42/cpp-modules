@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 14:24:06 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 14:24:06 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 14:33:07 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap()
 {
 	this->_name = "undefined";
 	this->_hitPoints = 100;
@@ -30,7 +30,6 @@ ScavTrap::ScavTrap(std::string name)
 	this->_attackDamage = 20;
 
 	std::cout << "ScavTrap: Default constructor called" << std::endl;
-
 }
 
 ScavTrap::ScavTrap(const ScavTrap &ref)
