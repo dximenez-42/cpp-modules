@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:54:46 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:46:52 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:48:32 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -23,8 +23,8 @@ int	main()
 {
 	// Animal a;		// Will give an error because Animal is an abstract class (has pure virtual functions)
 
-	const Animal*		j = new Dog();
-	const Animal*		i = new Cat();
+	const AAnimal*		j = new Dog();
+	const AAnimal*		i = new Cat();
 
 	std::cout << std::endl;
 

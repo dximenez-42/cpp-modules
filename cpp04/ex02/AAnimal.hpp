@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:54:48 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:46:20 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:48:13 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 #include <iomanip>
 #include <iostream>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string _type;
 	public:
-		Animal();								// Default constructor
-		Animal(std::string type);
-		Animal(const Animal &ref);				// Copy constructor
-		Animal &operator=(const Animal &ref);		// Copy assignment operator
-		virtual ~Animal();								// Destructor
+		AAnimal();								// Default constructor
+		AAnimal(std::string type);
+		AAnimal(const AAnimal &ref);				// Copy constructor
+		AAnimal &operator=(const AAnimal &ref);		// Copy assignment operator
+		virtual ~AAnimal();								// Destructor
 
 		virtual void	makeSound() const = 0;
 		std::string	getType() const;

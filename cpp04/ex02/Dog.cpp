@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:54:52 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:27:38 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:49:17 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog() : AAnimal("Dog")
 {
 	this->_brain = new Brain();
 	std::cout << "Dog empty constructor called" << std::endl;

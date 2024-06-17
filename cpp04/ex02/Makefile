@@ -1,8 +1,8 @@
-NAME		= brain
+NAME		= aanimal
 CXX			= g++
 CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
-SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS		= main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJS		= $(SRCS:.cpp=.o)
 
 all: $(NAME)

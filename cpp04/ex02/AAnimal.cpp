@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:54:50 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:45:35 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:49:03 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
 	this->_type = "undefined";
 	std::cout << "Animal empty constructor called" << std::endl;
 }
 
-Animal::Animal(std::string type)
+AAnimal::AAnimal(std::string type)
 {
 	this->_type = type;
 	std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &ref)
+AAnimal::AAnimal(const AAnimal &ref)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
 	*this = ref;
 }
 
-Animal &Animal::operator=(const Animal &ref)
+AAnimal &AAnimal::operator=(const AAnimal &ref)
 {
 	std::cout << "Animal copy assignment constructor called" << std::endl;
 	if (this != &ref)
@@ -40,12 +40,12 @@ Animal &Animal::operator=(const Animal &ref)
 	return (*this);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-std::string	Animal::getType() const
+std::string	AAnimal::getType() const
 {
 	return (this->_type);
 }

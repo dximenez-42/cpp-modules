@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 17:36:16 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:36:17 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:48:11 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat() : AAnimal("Cat")
 {
 	this->_brain = new Brain();
 	std::cout << "Cat empty constructor called" << std::endl;

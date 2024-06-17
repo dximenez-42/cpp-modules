@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:54:54 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 17:25:29 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:48:45 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	private:
 		Brain	*_brain;
