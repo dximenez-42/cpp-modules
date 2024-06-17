@@ -6,12 +6,12 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 14:24:44 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 14:34:27 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/17 14:53:11 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEMPLATE_HPP
-#define TEMPLATE_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include <string>
 #include <iomanip>
