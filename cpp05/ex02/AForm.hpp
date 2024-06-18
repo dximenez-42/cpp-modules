@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:21 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 10:33:21 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:49:45 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AForm
 		AForm(const std::string name, int gradeToSign, int gradeToExecute);				// Default constructor
 		AForm(const AForm &ref);				// Copy constructor
 		AForm &operator=(const AForm &ref);		// Copy assignment operator
-		~AForm();								// Destructor
+		virtual ~AForm();						// Destructor
 
 		void	beSigned(Bureaucrat &b);
 
