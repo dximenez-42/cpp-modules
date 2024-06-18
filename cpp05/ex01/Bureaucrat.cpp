@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:08:58 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 19:08:14 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:18:49 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ void	Bureaucrat::signForm(Form& form)
 }
 
 
-const char *Bureaucrat::GradeTooHighException::GradeTooHighException::what() const throw()
+const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Grade is too high");
 }
 
-const char *Bureaucrat::GradeTooLowException::GradeTooLowException::what() const throw()
+const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low");
 }

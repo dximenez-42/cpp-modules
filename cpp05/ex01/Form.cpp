@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:23 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 20:12:03 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:18:36 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	Form::beSigned(Bureaucrat &b)
 	if (b.getGrade() > this->_gradeToSign)
 		throw Form::GradeTooLowException();
 	this->_signed = true;
-	b.signForm(*this);
 }
 
 std::string	Form::getName() const
