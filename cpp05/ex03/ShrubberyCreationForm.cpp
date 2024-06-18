@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShubberyCreationForm.cpp                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:47:52 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 10:57:26 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:21:16 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShubberyCreationForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShubberyCreationForm::ShubberyCreationForm(const std::string target) : AForm("ShubberyCreationForm", 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) : AForm("ShrubberyCreationForm", 145, 137), _target(target)
 {}
 
-ShubberyCreationForm::ShubberyCreationForm(const ShubberyCreationForm &ref) : AForm(ref), _target(ref._target)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &ref) : AForm(ref), _target(ref._target)
 {}
 
-ShubberyCreationForm &ShubberyCreationForm::operator=(const ShubberyCreationForm &ref)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &ref)
 {
 	(void)ref;
 	return (*this);
 }
 
-ShubberyCreationForm::~ShubberyCreationForm()
+ShrubberyCreationForm::~ShrubberyCreationForm()
 {}
 
-void	ShubberyCreationForm::execute(Bureaucrat const & executor) const
+void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (executor.getGrade() > this->getGradeToExecute())
 		throw AForm::GradeTooLowException();

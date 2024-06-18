@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:21 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 10:49:45 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:29:44 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ class AForm
 				virtual const char *what() const throw();
 		};
 		class FormNotSigned : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
+		class FormDoesntExist : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();

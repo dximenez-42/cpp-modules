@@ -2,7 +2,7 @@ NAME		= intern
 CXX			= c++
 CXXFLAGS	= -g -std=c++98 -Wall -Wextra -Werror
 
-SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJS		= $(SRCS:.cpp=.o)
 
 all: $(NAME)

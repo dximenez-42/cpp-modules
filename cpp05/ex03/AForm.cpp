@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:23 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 10:33:46 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:30:03 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,11 @@ const char *AForm::GradeTooLowException::what() const throw()
 const char *AForm::FormNotSigned::what() const throw()
 {
 	return ("Form not signed");
+}
+
+const char *AForm::FormDoesntExist::what() const throw()
+{
+	return ("Form doesn't exist");
 }
 
 
