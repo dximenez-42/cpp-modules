@@ -6,13 +6,13 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:20:34 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 12:07:03 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:23:18 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
-#include "ShubberyCreationForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
@@ -22,7 +22,7 @@ int	main()
 	try
 	{
 		Bureaucrat b("Paco", 1);
-		ShubberyCreationForm f1("Shub Form");
+		ShrubberyCreationForm f1("Shrub Form");
 		RobotomyRequestForm f2("Robot Form");
 		PresidentialPardonForm f3("Pres Form");
 
