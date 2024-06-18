@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 10:40:18 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 12:04:10 by dximenez         ###   ########.fr       */
+/*   Created: 2024/06/18 12:04:04 by dximenez          #+#    #+#             */
+/*   Updated: 2024/06/18 12:04:30 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include <iostream>
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 	private:
 		const std::string	_target;
 	public:
-		RobotomyRequestForm(const std::string target);				// Default constructor
-		RobotomyRequestForm(const RobotomyRequestForm &ref);				// Copy constructor
-		RobotomyRequestForm &operator=(const RobotomyRequestForm &ref);		// Copy assignment operator
-		~RobotomyRequestForm();								// Destructor
+		PresidentialPardonForm(const std::string target);				// Default constructor
+		PresidentialPardonForm(const PresidentialPardonForm &ref);				// Copy constructor
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &ref);		// Copy assignment operator
+		~PresidentialPardonForm();								// Destructor
 
 		void	execute(Bureaucrat const & executor) const;
 };
