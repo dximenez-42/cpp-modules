@@ -2,7 +2,7 @@ NAME		= forms
 CXX			= c++
 CXXFLAGS	= -g -std=c++98 -Wall -Wextra -Werror
 
-SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShubberyCreationForm.cpp
+SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShubberyCreationForm.cpp RobotomyRequestForm.cpp
 OBJS		= $(SRCS:.cpp=.o)
 
 all: $(NAME)
