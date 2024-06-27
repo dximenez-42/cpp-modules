@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:28:27 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/03 22:26:29 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/27 11:22:28 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <string>
+#include <stdlib.h>
 
 class Contact
 {
