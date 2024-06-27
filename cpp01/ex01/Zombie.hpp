@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 21:18:34 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/04 14:11:51 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/27 11:30:18 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
+#include <stdlib.h>
 
 class Zombie
 {
