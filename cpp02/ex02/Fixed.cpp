@@ -6,11 +6,17 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 13:16:59 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/25 19:38:15 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:56:06 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <cmath>
+
+double round(double d)
+{
+	return floor(d + 0.5);
+}
 
 Fixed::Fixed()
 {
@@ -27,7 +33,7 @@ Fixed::Fixed(const int num)
 Fixed::Fixed(const float num)
 {
 	// std::cout	<< "Float constructor called" << std::endl;
-	_value = std::roundf(num * (1 << _fract_bits));
+	_value = round(num * (1 << _fract_bits));
 }
 
 Fixed::Fixed(const Fixed &ref)
@@ -61,7 +67,7 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return static_cast<float>((float)_value / (1 << _fract_bits));
+	return (float)_value / (float)(1 << _fract_bits);
 }
 
 int		Fixed::toInt() const
