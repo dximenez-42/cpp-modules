@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:32:20 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/04 17:09:43 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:05:05 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 HumanB::HumanB(std::string name)
 {
+	_weapon = NULL;
 	_name = name;
 }
 

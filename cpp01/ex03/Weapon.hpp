@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:20:17 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/04 16:54:19 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:04:14 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Weapon
 		Weapon(std::string type);
 		~Weapon();
 
-		std::string	getType();
+		const std::string	&getType();
 		void		setType(std::string);
 };
 

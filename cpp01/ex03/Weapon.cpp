@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:13:52 by dximenez          #+#    #+#             */
-/*   Updated: 2024/05/04 16:54:47 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:04:51 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::Weapon(std::string type)
 Weapon::~Weapon()
 {}
 
-std::string	Weapon::getType()
+const std::string	&Weapon::getType()
 {
 	return (_type);
 }
