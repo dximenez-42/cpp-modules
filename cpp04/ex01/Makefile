@@ -1,5 +1,5 @@
 NAME		= brain
-CXX			= g++
+CXX			= c++
 CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
