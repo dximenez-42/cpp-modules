@@ -6,18 +6,18 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:08:58 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 18:28:38 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/07/06 23:50:17 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const std::string name, uint8_t grade) : _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
 {
 	if (grade < 1)
-		throw Bureaucrat::GradeTooHighException();
-	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+	else if (grade > 150)
+		throw Bureaucrat::GradeTooHighException();
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &ref)
@@ -42,7 +42,7 @@ std::string Bureaucrat::getName() const
 	return (_name);
 }
 
-uint8_t Bureaucrat::getGrade() const
+int Bureaucrat::getGrade() const
 {
 	return (_grade);
 }
