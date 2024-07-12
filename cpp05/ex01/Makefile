@@ -1,6 +1,6 @@
 NAME		= form
 CXX			= c++
-CXXFLAGS	= -g -std=c++98 -Wall -Wextra -Werror
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRCS		= main.cpp Bureaucrat.cpp Form.cpp
 OBJS		= $(SRCS:.cpp=.o)

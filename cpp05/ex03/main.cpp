@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:20:34 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 12:28:38 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/07/12 13:53:30 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,18 @@ int	main()
 {
 	try
 	{
-		Intern	someRandomIntern;
-		AForm*	rrf;
+		Intern		someRandomIntern;
+		Bureaucrat	bender("Bender", 1);
+		AForm*		rrf;
 
-		// rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
 		// rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		// rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
-		rrf = someRandomIntern.makeForm("random form", "Bender");
+		// rrf = someRandomIntern.makeForm("random form", "Bender");
 		
-		std::cout << *rrf << std::endl << std::endl;
+		// bender.signForm(*rrf);
+
+		std::cout << *rrf << std::endl;
 	}
 	catch (std::exception &e)
 	{
