@@ -59,7 +59,7 @@ int	Span::shortestSpan()
 		for (i = v.begin(); i < v.end() - 1; ++i)
 		{
 			if (abs(*(i + 1) - *i) < gap)
-				gap = abs(*(i + 1) - *i); 
+				gap = abs(*(i + 1) - *i);
 		}
 		return gap;
 	}
