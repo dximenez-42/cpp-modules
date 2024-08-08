@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:21 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 19:03:00 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/08/08 21:48:09 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Form
 	private:
 		const std::string	_name;
 		bool				_signed;
-		const uint8_t		_gradeToSign;
-		const uint8_t		_gradeToExecute;
+		const int		_gradeToSign;
+		const int		_gradeToExecute;
 	public:
 		Form(const std::string name, int gradeToSign, int gradeToExecute);				// Default constructor
 		Form(const Form &ref);				// Copy constructor
@@ -34,8 +34,8 @@ class Form
 
 		std::string	getName() const;
 		bool		getSigned() const;
-		uint8_t		getGradeToSign() const;
-		uint8_t		getGradeToExecute() const;
+		int		getGradeToSign() const;
+		int		getGradeToExecute() const;
 
 		class GradeTooHighException : public std::exception
 		{

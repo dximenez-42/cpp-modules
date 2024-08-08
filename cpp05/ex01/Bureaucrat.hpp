@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:08:54 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/17 20:23:25 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/08/08 21:48:09 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ class Bureaucrat
 {
 	private:
 		const std::string	_name;
-		uint8_t				_grade;
+		int				_grade;
 	public:
-		Bureaucrat(const std::string name, uint8_t grade);				// Default constructor
+		Bureaucrat(const std::string name, int grade);				// Default constructor
 		Bureaucrat(const Bureaucrat &ref);				// Copy constructor
 		Bureaucrat &operator=(const Bureaucrat &ref);		// Copy assignment operator
 		~Bureaucrat();								// Destructor
 
 		std::string	getName() const;
-		uint8_t		getGrade() const;
+		int		getGrade() const;
 
 		void		incrementGrade();
 		void		decrementGrade();
