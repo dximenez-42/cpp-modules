@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:31:23 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 12:30:03 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/08/08 21:48:09 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ bool	AForm::getSigned() const
 	return (_signed);
 }
 
-uint8_t	AForm::getGradeToSign() const
+int	AForm::getGradeToSign() const
 {
 	return (_gradeToSign);
 }
 
-uint8_t	AForm::getGradeToExecute() const
+int	AForm::getGradeToExecute() const
 {
 	return (_gradeToExecute);
 }

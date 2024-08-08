@@ -6,7 +6,7 @@
 /*   By: dximenez <dximenez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:47:52 by dximenez          #+#    #+#             */
-/*   Updated: 2024/06/18 12:21:16 by dximenez         ###   ########.fr       */
+/*   Updated: 2024/08/08 22:52:55 by dximenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	if (!this->getSigned())
 		throw AForm::FormNotSigned();
 
-	std::ofstream file(this->_target + "_shrubbery");
+	std::ofstream file((this->_target + "_shrubbery").c_str());
 	file << "      *" << std::endl;
 	file << "     ***" << std::endl;
 	file << "    *****" << std::endl;
