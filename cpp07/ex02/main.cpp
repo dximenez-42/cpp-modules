@@ -6,6 +6,12 @@ int	main()
 	Array<int>	array;
 	Array<int>	array2(5);
 
+	array2[0] = 1;
+	array2[1] = 2;
+	array2[2] = 3;
+	array2[3] = 4;
+	array2[4] = 5;
+
 	std::cout << "A: ";
 	for (unsigned int i = 0; i < array2.size(); i++)
 	{

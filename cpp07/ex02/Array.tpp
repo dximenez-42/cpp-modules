@@ -10,8 +10,6 @@ Array<T>::Array()
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-	if (_size < 0)		//Doesnt fix overflow because unsigned int is always >= 0
-		throw Array<T>::InvalidInputException();
 	_data = new T[n];
 	_size = n;
 }
