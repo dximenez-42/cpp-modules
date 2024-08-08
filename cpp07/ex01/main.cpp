@@ -3,7 +3,7 @@
 
 void	func(std::string& str)
 {
-	for (size_t i = 0; i < strlen(str.c_str()); i++)
+	for (size_t i = 0; i < str.size(); i++)
 	{
 		str[i] = toupper(str[i]);
 	}
