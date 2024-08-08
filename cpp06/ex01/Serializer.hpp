@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Data.hpp"
 
+typedef	size_t	uintptr_t;
+
 class Serializer
 {
 	private:
