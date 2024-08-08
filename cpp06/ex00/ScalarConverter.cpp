@@ -43,9 +43,7 @@ bool	isDouble(std::string str)
 {
 	bool	hasDot = false;
 
-	if (std::strcmp(str.c_str(), "nan") == 0
-			|| std::strcmp(str.c_str(), "+inf") == 0
-			|| std::strcmp(str.c_str(), "-inf") == 0)
+	if (str == "nan" || str == "+inf" || str == "-inf")
 		return true;
 	if (str.length() == 1 && !std::isdigit(str[0]))
 		return false;
@@ -68,9 +66,7 @@ bool	isFloat(std::string str)
 {
 	bool	hasDot = false;
 
-	if (std::strcmp(str.c_str(), "nanf") == 0
-			|| std::strcmp(str.c_str(), "+inff") == 0
-			|| std::strcmp(str.c_str(), "-inff") == 0)
+	if (str == "nanf" || str == "+inff" || str == "-inff")
 		return true;
 	if ((str.length() == 1 && !std::isdigit(str[0])) || str[str.length() - 1] != 'f')
 		return false;
@@ -91,12 +87,12 @@ bool	isFloat(std::string str)
 
 bool	isPseudoLiteral(std::string str)
 {
-	if (std::strcmp(str.c_str(), "nan") == 0
-			|| std::strcmp(str.c_str(), "+inf") == 0
-			|| std::strcmp(str.c_str(), "-inf") == 0
-			|| std::strcmp(str.c_str(), "nanf") == 0
-			|| std::strcmp(str.c_str(), "+inff") == 0
-			|| std::strcmp(str.c_str(), "-inff") == 0)
+	if (str == "nan"
+			|| str == "+inf"
+			|| str == "-inf"
+			|| str == "nanf"
+			|| str == "+inff"
+			|| str == "-inff")
 		return true;
 	return false;
 }
@@ -127,7 +123,8 @@ void	printChar(std::string str)
 
 void	printInt(std::string str)
 {
-	int		i = std::stoi(str);
+	char*	end;
+	long	i = static_cast<long>(std::strtod(str.c_str(), &end));
 	char	c = static_cast<char>(i);
 	double	d = static_cast<double>(i);
 	float	f = static_cast<float>(i);
@@ -136,6 +133,7 @@ void	printInt(std::string str)
 		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
+
 
 	std::cout << "int: " << i << std::endl;
 
@@ -152,7 +150,8 @@ void	printInt(std::string str)
 
 void	printDouble(std::string str)
 {
-	double	d = std::stod(str);
+	char*	end;
+	double	d = std::strtod(str.c_str(), &end);
 	char	c = static_cast<char>(d);
 	int		i = static_cast<int>(d);
 	float	f = static_cast<float>(d);
@@ -163,12 +162,8 @@ void	printDouble(std::string str)
 		std::cout << "char: Non displayable" << std::endl;
 
 	std::cout << "int: " << i << std::endl;
+	std::cout << "float: " << f << "f" << std::endl;
 
-	if (d == static_cast<double>(f))
-		std::cout << "float: " << f << ".0f" << std::endl;
-	else
-		std::cout << "float: " << f << "f" << std::endl;
-	
 	if (d == static_cast<double>(i))
 		std::cout << "double: " << d << ".0" << std::endl;
 	else
@@ -177,7 +172,8 @@ void	printDouble(std::string str)
 
 void	printFloat(std::string str)
 {
-	float	f = std::stof(str);
+	char*	end;
+	float	f = std::strtof(str.c_str(), &end);
 	char	c = static_cast<char>(f);
 	int		i = static_cast<int>(f);
 	double	d = static_cast<double>(f);
