@@ -83,7 +83,7 @@ int	Span::longestSpan()
 
 const char*	Span::MaxSizeReachedException::what() const throw()
 {
-	return "Max size reached in vector";
+	return "Max size reached in container";
 }
 
 const char*	Span::NoSpanFoundException::what() const throw()
