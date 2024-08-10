@@ -1,27 +1,53 @@
 #include "MutantStack.hpp"
 #include <iostream>
 
+// int main()
+// {
+// 	MutantStack<int> mstack;
+
+// 	mstack.push(5);
+// 	mstack.push(17);
+
+// 	std::cout << mstack.top() << std::endl;
+
+// 	mstack.pop();
+
+// 	std::cout << mstack.size() << std::endl;
+
+// 	mstack.push(3);
+// 	mstack.push(5);
+// 	mstack.push(737);
+// 	//[...]
+// 	mstack.push(0);
+
+// 	MutantStack<int>::iterator it = mstack.begin();
+// 	MutantStack<int>::iterator ite = mstack.end();
+
+// 	++it;
+// 	--it;
+// 	while (it != ite)
+// 	{
+// 		std::cout << *it << std::endl;
+// 		++it;
+// 	}
+// 	std::stack<int> s(mstack);
+// 	return 0;
+// }
+
 int main()
 {
-	MutantStack<int> mstack;
+	MutantStack<std::string> mstack;
 
-	mstack.push(5);
-	mstack.push(17);
-
-	std::cout << mstack.top() << std::endl;
+	mstack.push("Hello");
+	mstack.push("World");
 
 	mstack.pop();
 
-	std::cout << mstack.size() << std::endl;
+	mstack.push("World");
+	mstack.push("!");
 
-	mstack.push(3);
-	mstack.push(5);
-	mstack.push(737);
-	//[...]
-	mstack.push(0);
-
-	MutantStack<int>::iterator it = mstack.begin();
-	MutantStack<int>::iterator ite = mstack.end();
+	MutantStack<std::string>::iterator it = mstack.begin();
+	MutantStack<std::string>::iterator ite = mstack.end();
 
 	++it;
 	--it;
@@ -30,6 +56,5 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
-	std::stack<int> s(mstack);
-	return 0;
+	std::stack<std::string> s(mstack);
 }
