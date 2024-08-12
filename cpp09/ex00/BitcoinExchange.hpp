@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <fstream>
 #include <map>
-#include <vector>
 #include <limits>
 
 class BitcoinExchange
@@ -25,6 +24,6 @@ public:
 };
 
 std::string	removeSpaces(std::string str);
-std::vector<std::string>	split(std::string str, char delimiter);
+std::pair<std::string, std::string>	split(std::string str, char delimiter);
 
 #endif

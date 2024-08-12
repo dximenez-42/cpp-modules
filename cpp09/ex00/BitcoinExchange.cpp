@@ -29,34 +29,33 @@ BitcoinExchange::BitcoinExchange(std::string input)
 
 		if (file.is_open())
 		{
-			std::vector<std::string> tokens;
+			std::pair<std::string, std::string> pair;
 			std::getline(file, line);
 			while (std::getline(file, line))
 			{
-				tokens = split(line, '|');
-				if (tokens.size() != 2)
+				pair = split(line, '|');
+
+				if (pair.first.empty() || pair.second.empty())
 				{
 					std::cerr << "Error: bad input => " << line << std::endl;
 					continue;
 				}
-				else
-				{
-					char*	end;
-					double	value = std::strtod(tokens[1].c_str(), &end);
-					double	rate = getExchangeRate(tokens[0]);
 
-					if ((value * rate) > std::numeric_limits<int>::max())
-					{
-						std::cerr << "Error: too large a number." << std::endl;
-						continue;
-					}
-					if (value < 0)
-					{
-						std::cerr << "Error: not a positive number." << std::endl;
-						continue;
-					}
-					std::cout << removeSpaces(tokens[0]) << " => " << removeSpaces(tokens[1]) << " = " << value * rate << std::endl;
+				char*	end;
+				double	value = std::strtod(pair.second.c_str(), &end);
+				double	rate = getExchangeRate(pair.first);
+
+				if ((value * rate) > std::numeric_limits<int>::max())
+				{
+					std::cerr << "Error: too large a number." << std::endl;
+					continue;
 				}
+				if (value < 0)
+				{
+					std::cerr << "Error: not a positive number." << std::endl;
+					continue;
+				}
+				std::cout << removeSpaces(pair.first) << " => " << removeSpaces(pair.second) << " = " << value * rate << std::endl;
 			}
 			file.close();
 		}
@@ -112,19 +111,22 @@ double	BitcoinExchange::getExchangeRate(std::string date)
 	}
 }
 
-std::vector<std::string>	split(std::string str, char delimiter)
+std::pair<std::string, std::string>	split(std::string str, char delimiter)
 {
-	std::vector<std::string> tokens;
+	std::pair<std::string, std::string> pair;
 	size_t start = str.find(delimiter);
 
-	while (start != std::string::npos)
+	if (start == std::string::npos)
+		return pair;
+
+	pair.first = str.substr(0, start);
+	pair.second = str.substr(start + 1);
+	if (pair.second.find(delimiter) != std::string::npos)
 	{
-		tokens.push_back(removeSpaces(str.substr(0, start)));
-		str = str.substr(start + 1);
-		start = str.find(delimiter);
+		pair.first.clear();
+		pair.second.clear();
 	}
-	tokens.push_back(removeSpaces(str));
-	return tokens;
+	return pair;
 }
 
 std::string	removeSpaces(std::string str)
