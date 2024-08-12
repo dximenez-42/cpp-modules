@@ -6,7 +6,8 @@
 #include <algorithm>
 #include <fstream>
 #include <map>
-
+#include <vector>
+#include <limits>
 
 class BitcoinExchange
 {
@@ -20,6 +21,7 @@ public:
 	~BitcoinExchange();
 
 	void	insert(std::string date, double value);
+	double	getExchangeRate(std::string date);
 };
 
 std::string	removeSpaces(std::string str);
