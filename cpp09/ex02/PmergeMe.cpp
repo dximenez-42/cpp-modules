@@ -71,11 +71,59 @@ const char* PmergeMe::NegativeNumber::what() const throw()
 	return "Negative number";
 }
 
-// Sort vector with Ford Jhonson algorithm
 void	PmergeMe::sortVector()
 {
+	sort(_vector);
 }
 
 void	PmergeMe::sortDeque()
 {
+	sort(_deque);
+}
+
+template<typename T>
+void PmergeMe::insert(T& container)
+{
+	typedef typename T::iterator Iterator;
+
+	for (Iterator it = container.begin(); it != container.end(); ++it)
+	{
+		typename T::value_type currentValue = *it;		// The value to be inserted
+		Iterator insertPos = it;						// Position to insert the currentValue
+
+		while (insertPos != container.begin())			// Move elements that are greater than currentValue to the right
+		{
+			Iterator prev = insertPos;
+			--prev;
+			
+			if (*prev > currentValue)
+			{
+				*insertPos = *prev;
+				insertPos = prev;
+			}
+			else
+			{
+				break;
+			}
+		}
+		*insertPos = currentValue;		// Place the currentValue in its correct position
+	}
+}
+
+template <typename T>
+void PmergeMe::sort(T& m)
+{
+	if (m.size() <= 2)
+		return insert(m);
+
+	typename T::iterator mid = m.begin();
+	std::advance(mid, m.size() / 2);
+
+	T left(m.begin(), mid);
+	T right(mid, m.end());
+
+	sort(left);
+	sort(right);
+
+	std::merge(left.begin(), left.end(), right.begin(), right.end(), m.begin());
 }

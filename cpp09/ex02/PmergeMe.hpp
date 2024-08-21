@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <ctime>
 #include <iterator>
+#include <algorithm>
 
 class PmergeMe
 {
@@ -18,6 +19,12 @@ class PmergeMe
 
 		void	sortVector();
 		void	sortDeque();
+
+		template<typename T>
+		static void insert(T& container);
+
+		template <typename T>
+		static void sort(T& m);
 
 	public:
 		PmergeMe(int ac, char **av);
