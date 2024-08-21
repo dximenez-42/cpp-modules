@@ -15,5 +15,9 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f checker
 
 re: fclean $(NAME)
+
+checker:
+	cc checker.c -o checker
